@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chamados de Atendimento</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+  <div class="container mx-auto p-6">
+    <header class="bg-white shadow p-4 rounded">
+      <h1 class="text-2xl font-bold">Chamados de Atendimento</h1>
+      <p class="text-gray-600">Olá, Rodrigo César</p>
+    </header>
+
+    <section class="mt-6">
+      <h2 class="text-xl font-semibold mb-4">Chamados abertos</h2>
+      <table class="min-w-full bg-white shadow rounded">
+        <thead>
+          <tr>
+            <th class="text-left p-4">ID</th>
+            <th class="text-left p-4">Código</th>
+            <th class="text-left p-4">Status</th>
+            <th class="text-left p-4">Comentários</th>
+            <th class="text-left p-4">Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border p-4">XYZ - 1003</td>
+            <td class="border p-4">34</td>
+            <td class="border p-4">Instock</td>
+            <td class="border p-4">N/A</td>
+            <td class="border p-4">
+              <button class="bg-blue-500 text-white px-4 py-2 rounded shadow">Marcar como resolvido</button>
+            </td>
+          </tr>
+          <!-- Repetir conforme os dados -->
+        </tbody>
+      </table>
+    </section>
+  </div>
+</body>
+</html>

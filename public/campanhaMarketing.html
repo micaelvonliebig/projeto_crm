@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova Campanha de Marketing</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+  <div class="container mx-auto p-6">
+    <header class="bg-white shadow p-4 rounded">
+      <h1 class="text-2xl font-bold">Nova Campanha de Marketing</h1>
+    </header>
+
+    <form class="mt-6 bg-white shadow p-6 rounded">
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <label for="nome-campanha" class="block text-sm font-medium text-gray-700">Nome da Campanha</label>
+          <input type="text" id="nome-campanha" name="nome-campanha" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+        </div>
+        <div>
+          <label for="objetivo" class="block text-sm font-medium text-gray-700">Objetivo da Campanha</label>
+          <input type="text" id="objetivo" name="objetivo" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+        </div>
+        <div>
+          <label for="valor-financeiro" class="block text-sm font-medium text-gray-700">Valor Financeiro</label>
+          <input type="number" id="valor-financeiro" name="valor-financeiro" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+        </div>
+        <div>
+          <label for="tipo-marketing" class="block text-sm font-medium text-gray-700">Tipo de Marketing</label>
+          <input type="text" id="tipo-marketing" name="tipo-marketing" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+        </div>
+        <div>
+          <label for="disparo-email" class="block text-sm font-medium text-gray-700">Disparo de Email</label>
+          <input type="email" id="disparo-email" name="disparo-email" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+        </div>
+        <div>
+          <label for="data-inicio" class="block text-sm font-medium text-gray-700">Data de Início</label>
+          <input type="date" id="data-inicio" name="data-inicio" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+        </div>
+      </div>
+      <div class="mt-6">
+        <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded shadow">Cadastrar Campanha</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
