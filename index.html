@@ -6,6 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    // Função para carregar e exibir os apelidos armazenados no LocalStorage
+    function carregarClientes() {
+      const clienteHolder = document.getElementById("holder-cliente");
+  
+      // Obter a lista de clientes do LocalStorage (ou um array vazio se não houver nada)
+      const clientes = JSON.parse(localStorage.getItem("clientes")) || [];
+  
+      // Adicionar cada cliente à lista na página
+      clientes.forEach(function(apelido) {
+        const clienteElemento = document.createElement("p");
+        clienteElemento.textContent = `Cliente: ${apelido}`;
+        clienteHolder.appendChild(clienteElemento);
+      });
+    }
+  
+    // Chamar a função quando a página for carregada
+    window.onload = carregarClientes;
+  </script>  
 </head>
 
 <body class="bg-gray-100">
@@ -26,11 +45,9 @@
     </section>
 
     <section class="mt-6">
-      <h2 class="text-xl font-semibold mb-4">Últimas análises</h2>
-      <div class="bg-white shadow p-4 rounded">
-        <!-- Conteúdo das análises -->
-        <p>Campanhas de Marketing</p>
-        <p>Mais vendas: Sarah Martins - 50,000</p>
+      <h2 class="text-xl font-semibold mb-4">Clientes</h2>
+      <div class="bg-white shadow p-4 rounded" id="holder-cliente">
+
       </div>
     </section>
 

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Novo Cliente</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
+
 <body class="bg-gray-100">
   <div class="container mx-auto p-6">
     <header class="bg-white shadow p-4 rounded">
@@ -44,9 +46,46 @@
         </div>
       </div>
       <div class="mt-6">
-        <a href="./clienteCadastrado"><button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded shadow">Cadastrar</button></a>
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded shadow" id="cadastrar-cliente-button">Cadastrar</button>
       </div>
     </form>
+    <div class="mt-4">
+      <a href="index.html">
+        <button type="button" class="bg-gray-500 text-white px-4 py-2 rounded shadow">Voltar para a Página Inicial</button>
+      </a>
+    </div>
+
   </div>
+
+  <script>
+    document.getElementById("cadastrar-cliente-button").addEventListener("click", function (event) {
+      event.preventDefault(); // Prevenir o comportamento padrão do formulário
+
+      // Exibir mensagem de sucesso
+      alert("Cliente cadastrado com sucesso!");
+
+      // Capturar o valor do campo apelido
+      const apelido = document.getElementById("apelido").value;
+
+      if (apelido) {
+        // Obter a lista de apelidos armazenada no LocalStorage (ou um array vazio se não houver nada)
+        let clientes = JSON.parse(localStorage.getItem("clientes")) || [];
+
+        // Adicionar o novo apelido
+        clientes.push(apelido);
+
+        // Atualizar o LocalStorage com a nova lista de apelidos
+        localStorage.setItem("clientes", JSON.stringify(clientes));
+
+        // Adicionar o apelido na página index.html
+        const clienteHolder = window.opener.document.getElementById("holder-cliente");
+        const novoCliente = document.createElement("p");
+        novoCliente.textContent = `Cliente: ${apelido}`;
+        clienteHolder.appendChild(novoCliente);
+      }
+    });
+  </script>
+
 </body>
+
 </html>
