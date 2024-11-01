@@ -1,0 +1,45 @@
+{
+  "chamados": [
+    {
+      "ID": 1,
+      "codigo": "CHM001",
+      "status": "aberto",
+      "comentario": "Chamado de teste aberto.",
+      "id": "4d6d"
+    },
+    {
+      "ID": 2,
+      "codigo": "CHM002",
+      "status": "em andamento",
+      "comentario": "Chamado de teste em andamento.",
+      "id": "6e71"
+    },
+    {
+      "ID": 3,
+      "codigo": "CHM003",
+      "status": "fechado",
+      "comentario": "Chamado de teste fechado.",
+      "id": "706d"
+    },
+    {
+      "id": "cca9",
+      "codigo": "CHM004",
+      "status": "em andamento",
+      "comentario": "Aguardando retorno do cliente"
+    },
+    {
+      "id": "034b",
+      "codigo": "CHM005",
+      "status": "Fechado",
+      "comentario": "Concluído",
+      "cliente": 1
+    },
+    {
+      "id": "6d01",
+      "codigo": "CHM006",
+      "status": "Em andamento",
+      "comentario": "...",
+      "cliente": 8583
+    }
+  ]
+}
